@@ -43,9 +43,16 @@ a{
 	border-width: 2px;
 }
 
-.border_right{
+.border_righttop{
 	border-color: black;
 	border-right-style: solid;
+	border-top-style:solid;
+	border-width: 2px;
+}
+
+.border_bottom{
+	border-color: black;
+	border-bottom-style:solid;
 	border-width: 2px;
 }
 

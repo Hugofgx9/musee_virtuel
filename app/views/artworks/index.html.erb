@@ -2,13 +2,13 @@
     <nav class="main-nav">
       <ul>
         <li class="border_black">
-          <a href="#">Expo</a>
+          <a href="#">Expositions</a>
         </li>
         <li class="border_black">
           <a href="#">Le Musée du Rêve</a>
         </li>
         <li class="border_black">
-          <a href="#">Contact</a>
+          <a href="#">Artistes</a>
         </li>
       </ul>
     </nav>
@@ -21,14 +21,14 @@
 <body class="background font">
 
 
-<div class="row1 no-gutters border_black">
+<div class="row1 no-gutters">
     <% @artworks.each do |artwork| %>
-      <div class="col-12 col-lg-3 border_right container1">
+      <div class="col-12 col-lg-3 border_righttop container1">
           <h3><%= artwork.autor %></h3>
           <h5><%= artwork.title %></h5>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
-      <div class="col-12 col-lg-3 border_right">
+      <div class="col-12 col-lg-3 border_righttop">
           <img src="<%= artwork.image %>" height=196px>
       </div>
     <% end %>
