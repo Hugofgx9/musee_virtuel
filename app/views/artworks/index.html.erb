@@ -29,22 +29,39 @@
 <h1>Artworks</h1>
 
 <table>
-
   <tbody>
     <% @artworks.each do |artwork| %>
-      <tr>
-        <td><%= artwork.title %></td>
-        <td><%= artwork.autor %></td>
-        <td><%= artwork.year %></td>
-        <td><%= artwork.description %></td>
-        <td><img src="<%= artwork.image %>" width=200px></td>
-        <td><%= link_to 'Show', artwork %></td>
-        <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
-        <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <div class="container1">
+          <div><%= artwork.title %></div>
+          <div><%= artwork.autor %></div>
+          <div><%= artwork.year %></div>
+          <div><%= artwork.description %></div>
+        </div>
+        <div class="container1">
+          <div><img src="<%= artwork.image %>" width=150px></div>
+          <div><%= link_to 'Show', artwork %></div>
+          <div><%= link_to 'Edit', edit_artwork_path(artwork) %></div>
+        </div>
     <% end %>
   </tbody>
 </table>
+
+<!--<table>
+  <tbody>
+    <% @artworks.each do |artwork| %>
+      <tr>
+          <td><%= artwork.title %></td>
+          <td><%= artwork.autor %></td>
+          <td><%= artwork.year %></td>
+          <td><%= artwork.description %></td>
+          <td><img src="<%= artwork.image %>" width=150px></td>
+          <td><%= link_to 'Show', artwork %></td>
+          <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>-->
 
 <br>
 

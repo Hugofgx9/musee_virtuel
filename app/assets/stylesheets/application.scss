@@ -1,0 +1,11 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+h1 {
+    padding-top: 2rem;
+}
+
+.container1{
+	display: flex;
+	flex-direction:column;
+}
