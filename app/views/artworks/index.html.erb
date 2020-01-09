@@ -1,42 +1,32 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Carousel</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <nav class="main-nav">
+      <ul>
+        <li class="border_black">
+          <a href="#">Expo</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="border_black">
+          <a href="#">Le Musée du Rêve</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <li class="border_black">
+          <a href="#">Contact</a>
         </li>
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
+
 
 <p id="notice"><%= notice %></p>
 
 <body class="background font">
 
-<h1>Artworks</h1>
 
 <div class="row1 no-gutters border_black">
     <% @artworks.each do |artwork| %>
-      <div class="col-12 col-lg-3 border_right">
+      <div class="col-12 col-lg-3 border_right container1">
           <h3><%= artwork.autor %></h3>
           <h5><%= artwork.title %></h5>
-          <p><%= artwork.year %></p>
-          <p><%= artwork.description %></p>
+          <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
       <div class="col-12 col-lg-3 border_right">
           <img src="<%= artwork.image %>" height=196px>
@@ -64,6 +54,6 @@
 
 <br>
 
-<%= link_to 'New Artwork', new_artwork_path %>
+<!--<%= link_to 'New Artwork', new_artwork_path %>-->
 
 </body>
