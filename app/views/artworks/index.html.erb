@@ -2,13 +2,13 @@
     <nav class="main-nav">
       <ul>
         <li class="border_black">
-          <a href="#">Expositions</a>
+          <%= link_to "Expositions", exhibs_path %>
         </li>
         <li class="border_black">
-          <a href="#">Le Musée du Rêve</a>
+          <%= link_to "Le Musée du Rêve", artworks_path %>
         </li>
         <li class="border_black">
-          <a href="#">Artistes</a>
+          <%= link_to "Artistes", artists_path %>
         </li>
       </ul>
     </nav>
@@ -16,16 +16,14 @@
 </header>
 
 
-<p id="notice"><%= notice %></p>
-
 <body class="background font">
 
 
-<div class="row1 no-gutters">
+<div class="row1_artwork no-gutters">
     <% @artworks.each do |artwork| %>
       <div class="col-12 col-lg-3 border_righttop container1">
-          <h3><%= artwork.autor %></h3>
-          <h5><%= artwork.title %></h5>
+          <div><%= link_to artwork.title, artwork, class: "a_artworktitle" %></div> 
+          <h3 ><%= artwork.artist %> </h3>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
       <div class="col-12 col-lg-3 border_righttop">
@@ -40,7 +38,7 @@
     <% @artworks.each do |artwork| %>
       <tr >
           <td><%= artwork.title %></td>
-          <td><%= artwork.autor %></td>
+          <td>AUTEUR</td>
           <td><%= artwork.year %></td>
           <td><%= artwork.description %></td>
           <td><img src="<%= artwork.image %>" width=150px></td>

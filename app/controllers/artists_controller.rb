@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.all
+    @artists = Artist.all.sort { |a,b| a.name <=> b.name }
   end
 
   # GET /artists/1
@@ -69,6 +69,6 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit(:name, :artwork)
+      params.require(:artist).permit(:name, :artwork_id)
     end
 end

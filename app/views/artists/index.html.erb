@@ -1,28 +1,32 @@
-<p id="notice"><%= notice %></p>
+<header>
+    <nav class="main-nav">
+      <ul>
+        <li class="border_black">
+          <%= link_to "Expositions", exhibs_path %>
+        </li>
+        <li class="border_black">
+          <%= link_to "Le Musée du Rêve", artworks_path %>
+        </li>
+        <li class="border_black">
+          <%= link_to "Artistes", artists_path %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<body class="background font">
 
 <h1>Artists</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Artwork</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="row1_artist no-gutters">
     <% @artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-        <td><%= artist.artwork %></td>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-12 col-lg-3 border_righttop container1">
+        <%= link_to artist.name, artist, class: "a_artistname" %> 
+      </div>
     <% end %>
-  </tbody>
-</table>
+</div>
 
 <br>
 

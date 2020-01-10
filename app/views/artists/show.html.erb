@@ -1,13 +1,25 @@
-<p id="notice"><%= notice %></p>
+<header>
+    <nav class="main-nav">
+      <ul>
+        <li class="border_black">
+          <%= link_to "Expositions", exhibs_path %>
+        </li>
+        <li class="border_black">
+          <%= link_to "Le Musée du Rêve", artworks_path %>
+        </li>
+        <li class="border_black">
+          <%= link_to "Artistes", artists_path %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<body class="background font">
 
 <p>
   <strong>Name:</strong>
   <%= @artist.name %>
-</p>
-
-<p>
-  <strong>Artwork:</strong>
-  <%= @artist.artwork %>
 </p>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
