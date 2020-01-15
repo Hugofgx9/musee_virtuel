@@ -23,8 +23,12 @@
 <div class="row1_show no-gutters">
       <div class="col-12 col-lg-6 border_righttop container1">
           <h5> <%= @artwork.title %> </h5> 
-          <h3><%= link_to @artwork.artist, artist_path(@artwork.artist) %> </h3>
-          <p> <%= link_to @artwork.exhib, exhib_path(@artwork.exhib), class: "exhib" %> </p>
+          <% if artwork.artist %> 
+              <h3> <%= link_to artwork.artist, artist_path(artwork.artist) %> </h3> 
+          <% end %>
+          <% if artwork.exhib %> 
+              <p> <%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib" %> </p> 
+          <%end %>
           <p> <%= @artwork.year %>, <%= @artwork.description %> </p>
 
       </div>
