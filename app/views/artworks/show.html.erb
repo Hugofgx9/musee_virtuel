@@ -22,14 +22,14 @@
 
 <div class="row1_show no-gutters">
       <div class="col-12 col-lg-6 border_righttop container1">
-          <h5> <%= @artwork.title %> </h5> 
+          <h5 class="title"> <%= @artwork.title %> </h5> 
           <% if @artwork.artist %> 
-              <h3> <%= link_to @artwork.artist, artist_path(@artwork.artist) %> </h3> 
+              <div> <%= link_to @artwork.artist, artist_path(@artwork.artist), class: "artist" %> </div> 
           <% end %>
           <% if @artwork.exhib %> 
-              <p> <%= link_to @artwork.exhib, exhib_path(@artwork.exhib), class: "exhib" %> </p> 
+              <div> <%= link_to @artwork.exhib, exhib_path(@artwork.exhib), class: "exhib" %> </div> 
           <%end %>
-          <p> <%= @artwork.year %>, <%= @artwork.description %> </p>
+          <div> <%= @artwork.year %>, <%= @artwork.description %> </div>
 
       </div>
       <div class="col-12 col-lg-6 border_righttop">

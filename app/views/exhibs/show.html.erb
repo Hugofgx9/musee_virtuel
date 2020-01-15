@@ -17,15 +17,15 @@
 
 <body class="background font">
 
-<h1><%= @exhib.title %></h1>
-<p> <%= @exhib.description %><p>
+<h1 class= "border_righttop"><%= @exhib.title %></h1>
+<div class="border_righttop"><%= @exhib.description %><div>
 
 <div class="row1_artwork no-gutters">
     <% @exhib.artworks.each do |artwork| %>
       <div class="col-12 col-lg-3 border_righttop container1">
-          <div><%= link_to artwork.title, artwork, class: "a_artworktitle" %></div>
+          <div><%= link_to artwork.title, artwork, class: "title" %></div>
           <% if artwork.artist %>
-              <h3 ><%= link_to artwork.artist, artist_path(artwork.artist) %> </h3> 
+              <div ><%= link_to artwork.artist, artist_path(artwork.artist), class: "artist" %> </div> 
           <%end %>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>

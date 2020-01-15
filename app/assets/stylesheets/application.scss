@@ -2,6 +2,16 @@
 @import "bootstrap";
 
 
+
+.background{
+	background-color: white;
+}
+
+.font{
+	font-family: 'Work Sans', sans-serif;
+	color:black;
+}
+
 h3 {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -30,14 +40,6 @@ a{
 	font-weight: bold;
 	color:black;
 	font-size: 1.4rem;
-}
-
-.exhib{
-	font-family: 'Work Sans', sans-serif;
- 	text-transform: uppercase;
-	font-weight: bold;
-	color:black;
-	font-size: 1.2rem;
 }
 
 .main-nav{
@@ -105,15 +107,21 @@ a{
 
 }
 
-.background{
-	background-color: white;
+.title{
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.font{
-	font-family: 'Work Sans', sans-serif;
-	color:black;
+.artist{
+	font-size: 1.2rem;
 }
 
-.container1 {
-
+.exhib {
+	font-size: 1rem;
+	font-weight: regular;
+	text-transform: none;
 }
+
+
+

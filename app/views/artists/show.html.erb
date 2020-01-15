@@ -22,9 +22,9 @@
 <div class="row1_artwork no-gutters">
     <% @artist.artworks.each do |artwork| %>
       <div class="col-12 col-lg-3 border_righttop container1">
-          <div><%= link_to artwork.title, artwork, class: "a_artworktitle" %></div>
+          <div><%= link_to artwork.title, artwork, class: "title" %></div>
           <% if artwork.exhib %> 
-              <p> <%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib" %> </p> 
+              <div> <%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib" %> </div> 
           <%end %>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
