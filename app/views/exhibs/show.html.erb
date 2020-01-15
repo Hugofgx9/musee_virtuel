@@ -1,14 +1,38 @@
-<p id="notice"><%= notice %></p>
+<header>
+    <nav class="main-nav">
+      <ul>
+        <li class="border_black">
+          <%= link_to "Expositions", exhibs_path %>
+        </li>
+        <li class="border_black">
+          <%= link_to "Le Musée du Rêve", artworks_path %>
+        </li>
+        <li class="border_black">
+          <%= link_to "Artistes", artists_path %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<p>
-  <strong>Title:</strong>
-  <%= @exhib.title %>
-</p>
+<body class="background font">
 
-<p>
-  <strong>Description:</strong>
-  <%= @exhib.description %>
-</p>
+<h1><%= @exhib.title %></h1>
+<p> <%= @exhib.description %><p>
+
+<div class="row1_artwork no-gutters">
+    <% @exhib.artworks.each do |artwork| %>
+      <div class="col-12 col-lg-3 border_righttop container1">
+          <div><%= link_to artwork.title, artwork, class: "a_artworktitle" %></div>
+          <h3 ><%= link_to artwork.artist, artist_path(artwork.artist) %> </h3>
+          <p><%= artwork.year %>, <%= artwork.description %></p>
+      </div>
+      <div class="col-12 col-lg-3 border_righttop">
+          <img src="<%= artwork.image %>" height=196px>
+      </div>
+    <% end %>
+</div>
+
 
 <%= link_to 'Edit', edit_exhib_path(@exhib) %> |
 <%= link_to 'Back', exhibs_path %>

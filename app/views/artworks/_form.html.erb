@@ -1,6 +1,7 @@
 <%= simple_form_for(@artwork) do |f| %>
     <%= f.input :title %>
     <%= f.association :artist, prompt: "Choose an Artist" %>
+    <%= f.association :exhib, prompt: "Choose an Exposition" %>
     <%= f.input :year %>
     <%= f.input :description %>
     <%= f.input :image %>

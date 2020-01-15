@@ -17,10 +17,20 @@
 
 <body class="background font">
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+<h1><%= @artist.name %></h1>
+
+<div class="row1_artwork no-gutters">
+    <% @artist.artworks.each do |artwork| %>
+      <div class="col-12 col-lg-3 border_righttop container1">
+          <div><%= link_to artwork.title, artwork, class: "a_artworktitle" %></div>
+          <p><%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib" %> </p>
+          <p><%= artwork.year %>, <%= artwork.description %></p>
+      </div>
+      <div class="col-12 col-lg-3 border_righttop">
+          <img src="<%= artwork.image %>" height=196px>
+      </div>
+    <% end %>
+</div>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

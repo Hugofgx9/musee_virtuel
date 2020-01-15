@@ -23,8 +23,10 @@
 <div class="row1_show no-gutters">
       <div class="col-12 col-lg-6 border_righttop container1">
           <h5> <%= @artwork.title %> </h5> 
-          <h3 > <%= @artwork.artist %> </h3>
+          <h3><%= link_to @artwork.artist, artist_path(@artwork.artist) %> </h3>
+          <p> <%= link_to @artwork.exhib, exhib_path(@artwork.exhib), class: "exhib" %> </p>
           <p> <%= @artwork.year %>, <%= @artwork.description %> </p>
+
       </div>
       <div class="col-12 col-lg-6 border_righttop">
           <img src="<%= @artwork.image %>" height=300px>
