@@ -24,13 +24,6 @@
       <div class="col-12 col-lg-3 border_righttop container1">
           <h3><%= link_to exhib.title, exhib %></h3>
           <p> <%= exhib.description %></p>
-          <div><%= link_to 'Show', exhib %></div>
-          <div><%= link_to 'Edit', edit_exhib_path(exhib) %></div>
-          <div><%= link_to 'Destroy', exhib, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
     <% end %>
 </div>
-
-<br>
-
-<%= link_to 'New Exhib', new_exhib_path %>
