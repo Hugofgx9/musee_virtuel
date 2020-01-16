@@ -46,6 +46,11 @@ a{
 	height: 80px;
 }
 
+.main-nav li:hover{
+	background-color: black;
+	transition: .3s ease;
+}
+
 .main-nav ul{
   	list-style: none;
 	display: flex;
@@ -143,6 +148,24 @@ a{
 }
 
 .image{
+	background-color: black;
 	background-size: cover;
+	background-position: center;
 	height: 198px;
+}
+
+.image:hover{
+	opacity: 0.8;
+	transition: .3s ease;
+}
+
+.change_backcolor:hover{
+	background-color: #BDBDBD;
+	transition: .3s ease;
+}
+
+.change_textcolor:hover{
+	color:white;
+	text-decoration:none;
+	transition: .1s ease;
 }
