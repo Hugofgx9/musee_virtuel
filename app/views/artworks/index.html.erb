@@ -22,13 +22,17 @@
 <div class="row1_artwork no-gutters border_top">
     <% @artworks.each do |artwork| %>
       <div class="col-12 col-lg-3 border_right border_bottom container1">
-          <h5> <%= link_to artwork.title, artwork, class: "title" %> </h5> 
+          <% if artwork.title.length > 20 %>
+          <h5> <%= link_to artwork.title[0..18] + ". .", artwork, class: "title" %> </h5>
+          <% else %>
+          <h5> <%= link_to artwork.title, artwork, class: "title" %> </h5>
+          <% end %> 
           <% if artwork.artist %> 
               <div> <%= link_to artwork.artist, artist_path(artwork.artist), class: "artist" %> </div> 
           <% end %>
           <% if artwork.exhib %> 
               <div> <%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib" %> </div> 
-          <%end %>
+          <% end %>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
       <div class="col-12 col-lg-3 border_right border_bottom image" style="background-image:url(<%= artwork.image %>)">
