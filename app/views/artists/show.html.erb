@@ -19,17 +19,16 @@
 
 <h1><%= @artist.name %></h1>
 
-<div class="row1_artwork no-gutters">
+<div class="row1_artwork no-gutters border_top">
     <% @artist.artworks.each do |artwork| %>
-      <div class="col-12 col-lg-3 border_righttop container1">
+      <div class="col-12 col-lg-3 border_right border_bottom container1">
           <div><%= link_to artwork.title, artwork, class: "title" %></div>
           <% if artwork.exhib %> 
               <div> <%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib" %> </div> 
           <%end %>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
-      <div class="col-12 col-lg-3 border_righttop">
-          <img src="<%= artwork.image %>" height=196px>
+      <div class="col-12 col-lg-3  border_right border_bottom image" style="background-image:url(<%= artwork.image %>)">
       </div>
     <% end %>
 </div>

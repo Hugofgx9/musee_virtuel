@@ -17,20 +17,19 @@
 
 <body class="background font">
 
-<h1 class= "border_righttop"><%= @exhib.title %></h1>
-<div class="border_righttop"><%= @exhib.description %><div>
+<h1 class= "border_top"><%= @exhib.title %></h1>
+<div class="border_top"><%= @exhib.description %><div>
 
-<div class="row1_artwork no-gutters">
+<div class="row1_artwork no-gutters border_top">
     <% @exhib.artworks.each do |artwork| %>
-      <div class="col-12 col-lg-3 border_righttop container1">
+      <div class="col-12 col-lg-3 border_right border_bottom container1">
           <div><%= link_to artwork.title, artwork, class: "title" %></div>
           <% if artwork.artist %>
               <div ><%= link_to artwork.artist, artist_path(artwork.artist), class: "artist" %> </div> 
           <%end %>
           <p><%= artwork.year %>, <%= artwork.description %></p>
       </div>
-      <div class="col-12 col-lg-3 border_righttop">
-          <img src="<%= artwork.image %>" height=196px>
+      <div class="col-12 col-lg-3 border_right border_bottom image" style="background-image:url(<%= artwork.image %>)">
       </div>
     <% end %>
 </div>

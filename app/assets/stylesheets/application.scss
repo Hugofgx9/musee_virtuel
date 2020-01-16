@@ -85,6 +85,24 @@ a{
 	border-width: 2px;
 }
 
+.border_top{
+	border-color: black;
+	border-top-style:solid;
+	border-width: 2px;
+}
+
+.border_left{
+	border-color: black;
+	border-left-style:solid;
+	border-width: 2px;
+}
+
+.border_right{
+	border-color: black;
+	border-right-style:solid;
+	border-width: 2px;
+}
+
 .row1_artwork{
 	height: 200px;
 	display: flex;
@@ -96,6 +114,7 @@ a{
 	height: 302px;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
@@ -123,5 +142,7 @@ a{
 	text-transform: none;
 }
 
-
-
+.image{
+	background-size: cover;
+	height: 198px;
+}
