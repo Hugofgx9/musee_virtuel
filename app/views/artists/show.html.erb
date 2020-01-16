@@ -30,7 +30,12 @@
           <% if artwork.exhib %> 
               <div> <%= link_to artwork.exhib, exhib_path(artwork.exhib), class: "exhib change_textcolor" %> </div> 
           <%end %>
-          <p><%= artwork.year %>, <%= artwork.description %></p>
+
+          <%if artwork.year %>
+                <p><%= artwork.year %>, <%= artwork.description %></p>
+            <% else %>
+                <p> <%= artwork.description %> </p>
+            <% end %>
       </div>
 
 
