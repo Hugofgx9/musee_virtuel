@@ -3,6 +3,46 @@
 
 
 
+.a_headercontent{
+	font-family: 'Work Sans', sans-serif;
+ 	text-transform: uppercase;
+	font-weight: bold;
+	color:black;
+	font-size: 2rem;
+}
+.main-nav{
+	height: 80px;
+}
+
+.main-nav li:hover{
+	background-color: black;
+	transition: .3s ease;
+}
+
+.main-nav ul{
+  	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+.main-nav ul a{
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+
+    /* votre code ici, pour les écrans de taille < 768 px */
+@media (max-width: 768px) {
+
+}
+
+
+
+
 .background{
 	background-color: white;
 }
@@ -26,44 +66,12 @@ a{
 	font-size: 2rem;
 }
 
-.a_headercontent{
-	font-family: 'Work Sans', sans-serif;
- 	text-transform: uppercase;
-	font-weight: bold;
-	color:black;
-	font-size: 2rem;
-}
-
 .a_artworktitle{
 	font-family: 'Work Sans', sans-serif;
  	text-transform: uppercase;
 	font-weight: bold;
 	color:black;
 	font-size: 1.4rem;
-}
-
-.main-nav{
-	height: 80px;
-}
-
-.main-nav li:hover{
-	background-color: black;
-	transition: .3s ease;
-}
-
-.main-nav ul{
-  	list-style: none;
-	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	margin: 0;
-	padding: 0;
-}
-
-
-.main-nav ul a{
-	padding-top: 14px;
-	padding-bottom: 14px;
 }
 
 .no-gutters {
