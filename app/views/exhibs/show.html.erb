@@ -1,22 +1,3 @@
-<header>
-    <nav class="main-nav">
-      <ul>
-        <li class="border_black">
-          <%= link_to "Expositions", exhibs_path, class: "change_textcolor" %>
-        </li>
-        <li class="border_black">
-          <%= link_to "Le Musée du Rêve", artworks_path, class: "change_textcolor" %>
-        </li>
-        <li class="border_black">
-          <%= link_to "Artistes", artists_path, class: "change_textcolor" %>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<body class="background font">
-
 <h1 class= "border_top"><%= @exhib.title %></h1>
 <div class="border_top"><%= @exhib.description %><div>
 

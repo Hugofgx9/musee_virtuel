@@ -1,28 +1,9 @@
-<header>
-    <nav class="main-nav">
-      <ul>
-        <li class="border_black">
-          <%= link_to "Expositions", exhibs_path, class: "change_textcolor" %>
-        </li>
-        <li class="border_black">
-          <%= link_to "Le Musée du Rêve", artworks_path, class: "change_textcolor" %>
-        </li>
-        <li class="border_black">
-          <%= link_to "Artistes", artists_path, class: "change_textcolor" %>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<body class="background font">
-
 <h1>Artistes</h1>
 
 
 <div class="row1_artist no-gutters border_top">
     <% @artists.each do |artist| %>
-      <div class="col-12 col-lg-3 border_right border_bottom change_backcolor">
+      <div class="col-12 col-lg-3 col-md-6 border_right border_bottom change_backcolor">
           <%=link_to artist do %> <!-- ce link_to ne fonctionne pas -->
               <div><%= link_to artist.name, artist, class: "a_artistname change_textcolor" %> 
               </div>

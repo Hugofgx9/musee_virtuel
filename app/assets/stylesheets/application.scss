@@ -12,11 +12,7 @@
 }
 .main-nav{
 	height: 80px;
-}
-
-.main-nav li:hover{
 	background-color: black;
-	transition: .3s ease;
 }
 
 .main-nav ul{
@@ -28,6 +24,16 @@
 	padding: 0;
 }
 
+.main-nav li{
+	margin-top: 15px;
+	background-color: white;
+	transition: 1s ease;
+}
+
+.main-nav li:hover{
+	background-color: black;
+	transition: .3s ease;
+}
 
 .main-nav ul a{
 	padding-top: 14px;
