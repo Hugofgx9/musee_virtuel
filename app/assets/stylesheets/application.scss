@@ -40,11 +40,32 @@
 	padding-bottom: 14px;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-block-start:0;
+}
+
+.burger {
+	display: none;
 }
 
 
     /* votre code ici, pour les écrans de taille < 768 px */
 @media (max-width: 768px) {
+	.main-nav li:not(.burger){
+		display: none;
+	}
+
+	.burger {
+		display: inline-block;
+		font-family: 'Work Sans', sans-serif;
+	 	text-transform: uppercase;
+		font-weight: bold;
+		color:black;
+		font-size: 2rem;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	
 
 }
 
